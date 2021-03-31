@@ -24,12 +24,16 @@ function appendRecipes(data){
         source.title = data["hits"][i]["recipe"]["source"];
         source.href = data["hits"][i]["recipe"]["url"];
 
+        let yield = document.createElement('p');
+        yield.innerHTML = "Servings: " + parseInt(data["hits"][i]["recipe"]["yield"]);
+
 
         document.getElementById("recipeContainer").appendChild(div);
         div.appendChild(recipeName);
         div.appendChild(foodImg);
         div.appendChild(cal);
         div.appendChild(source);
+        div.appendChild(yield);
         
     }
 

@@ -5,7 +5,7 @@ function appendRecipes(data){
     console.log(data);
     document.getElementById("recipeContainer").innerHTML="";
     document.getElementById("recipeContainer").style.display="flex";
-    for(i = 0; i < 7 ; i++){
+    for(i = 0; i < 5 ; i++){
         let div = document.createElement('div');
         div.setAttribute("id", "Div"+i);
         div.className = 'tile';
@@ -18,7 +18,7 @@ function appendRecipes(data){
         foodImg.src=data["hits"][i]["recipe"]["image"];
  
         let cal = document.createElement('p');
-        cal.setAttribute("id","calories");
+        cal.setAttribute("id","desc");
         cal.innerHTML = "Calories: " + parseInt(data["hits"][i]["recipe"]["calories"]);
 
         let source = document.createElement('a');
@@ -27,6 +27,11 @@ function appendRecipes(data){
         source.appendChild(linkText);
         source.title = data["hits"][i]["recipe"]["source"];
         source.href = data["hits"][i]["recipe"]["url"];
+        
+        let yield = document.createElement('p');
+        yield.innerHTML = "Servings: " + parseInt(data["hits"][i]["recipe"]["yield"]);
+        yield.setAttribute("id","desc");
+
 
 
         document.getElementById("recipeContainer").appendChild(div);
@@ -34,7 +39,7 @@ function appendRecipes(data){
         div.appendChild(foodImg);
         div.appendChild(source);
         div.appendChild(cal);
-        
+        div.appendChild(yield);
     }
 
 }

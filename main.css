@@ -86,20 +86,25 @@ body{margin:0;background-color:var(--pewt);}
     font-family: 'Abel', sans-serif;
     color:var(--salm);
     font-size:20px;
+    margin-bottom: 15px;
 }
 .foodLink:visited{
     color:var(--salm);
 }
-#calories{
+#desc{
     text-align: left;
     color:var(--salm);;
     font-family: 'Abel', sans-serif;
-    font-size:15
+    font-size:15;
+    margin-top: 0px;
+    margin-bottom:0px;
+    padding-left: 5px;
 }
 
 h1{
-    font-family: 'Dela Gothic One', cursive;
-    color:#ece4db;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 50px;
+    color:var(--salm);
 }
 
 
