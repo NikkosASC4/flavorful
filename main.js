@@ -1,6 +1,14 @@
 let submitButton = document.getElementById("submit");
 let searchData;
 
+function openForm() {
+    console.log("login clicked");
+    document.getElementById("myForm").style.display = "block";
+}
+  
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
 function appendRecipes(data){
     console.log(data);
     document.getElementById("recipeContainer").innerHTML="";
@@ -43,6 +51,7 @@ function appendRecipes(data){
     }
 
 }
+
 let jsondata;
 function searchRecipes(){
     let api = "https://api.edamam.com/search?q="

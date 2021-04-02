@@ -3,6 +3,22 @@
     --salm: #F03A47;
 }
 body{margin:0;background-color:var(--pewt);}
+.navbar{
+    background-color: #3A4454;
+    overflow:hidden;
+}
+#loginbutton{
+    float: left;
+    color: var(--salm);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Varela Round', sans-serif;
+    background:none;
+    border:none;
+
+}
 .header{
     padding: 150px;
     text-align: center;
@@ -100,6 +116,56 @@ body{margin:0;background-color:var(--pewt);}
     margin-bottom:0px;
     padding-left: 5px;
 }
+.form-popup {
+    display: none;
+    position:absolute;
+    z-index: 9;
+    background-color:#ECDCB0;
+    font-family: 'Lexend', sans-serif;
+    justify-content: center;
+    border-radius: 20px;
+  }
+.form-container input[type=text], .form-container input[type=password] {
+    width: 30%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    
+  }
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    
+  }
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    align-items: center;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 20px;
+    font-family: 'Abel', sans-serif;
+    
+  }
+  
+  /* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: var(--salm);
+  }
+.form-container .register {
+    background-color: #4B3F72;
+  }
+  
+  /* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
 
 h1{
     font-family: 'Varela Round', sans-serif;
