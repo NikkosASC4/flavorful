@@ -1,13 +1,44 @@
-let submitButton = document.getElementById("submit");
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAtJ_Xg6aEJXUARXj3fUyayVXzOGi4WGnw",
+    authDomain: "flavorful-ae540.firebaseapp.com",
+    projectId: "flavorful-ae540",
+    storageBucket: "flavorful-ae540.appspot.com",
+    messagingSenderId: "68163688464",
+    appId: "1:68163688464:web:40e833b5a386d112e41295"
+  };
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+
+
 let searchData;
 
-function openForm() {
-    console.log("login clicked");
-    document.getElementById("myForm").style.display = "block";
+function openForm() {;
+    document.getElementById("formContainer").style.display = "block";
 }
   
 function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+    document.getElementById("formContainer").style.display = "none";
+}
+
+function signUp() {
+    let email = document.getElementById("email");
+    let password = document.getElementById("psw");
+    let promise = auth.createUserWithEmailAndPassword(email.value,password.value);
+    promise.catch(e => alert(e.message));
+}
+
+function signIn(){
+    let email = document.getElementById("email");
+    let password = document.getElementById("psw");
+    let promise = auth.signInWithEmailAndPassword(email.value,password.value);
+    promise.catch(e => alert(e.message));
+}
+function signOut(){
+    auth.SignOut();
+    alert("Signed out")
 }
 function appendRecipes(data){
     console.log(data);
@@ -64,5 +95,8 @@ function searchRecipes(){
     .then(data => appendRecipes(data))
 
 }
+let submitButton = document.getElementById("submit");
 submitButton.onclick = function() {searchRecipes();return false};
+
+
 
