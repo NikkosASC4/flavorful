@@ -16,18 +16,19 @@ const auth = firebase.auth();
 let searchData;
 
 function openForm() {;
-    document.getElementById("formContainer").style.display = "block";
+    document.getElementById("signInContainer").style.display = "block";
 }
   
 function closeForm() {
-    document.getElementById("formContainer").style.display = "none";
+    document.getElementById("signInContainer").style.display = "none";
 }
 
 function signUp() {
     let email = document.getElementById("email");
     let password = document.getElementById("psw");
-    let promise = auth.createUserWithEmailAndPassword(email.value,password.value);
+    const promise = auth.createUserWithEmailAndPassword(email.value,password.value);
     promise.catch(e => alert(e.message));
+    alert("Signed Up");
 }
 
 function signIn(){
@@ -35,6 +36,8 @@ function signIn(){
     let password = document.getElementById("psw");
     let promise = auth.signInWithEmailAndPassword(email.value,password.value);
     promise.catch(e => alert(e.message));
+    alert("Signed In" + email);
+    
 }
 function signOut(){
     auth.SignOut();

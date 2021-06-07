@@ -116,7 +116,7 @@ body{margin:0;background-color:var(--pewt);}
     margin-bottom:0px;
     padding-left: 5px;
 }
-.form-popup {
+.signIn-popup {
     display: none;
     position:absolute;
     z-index: 9;
@@ -125,7 +125,7 @@ body{margin:0;background-color:var(--pewt);}
     justify-content: center;
     border-radius: 20px;
   }
-.form-container input[type=text], .form-container input[type=password] {
+.signIn-container input[type=text], .signIn-container input[type=password] {
     width: 30%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -133,12 +133,12 @@ body{margin:0;background-color:var(--pewt);}
     background: #f1f1f1;
     
   }
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.signIn-container input[type=text]:focus, .signIn-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
     
   }
-.form-container .btn {
+.signIn-container .btn {
     background-color: #4CAF50;
     color: white;
     padding: 16px 20px;
@@ -154,15 +154,15 @@ body{margin:0;background-color:var(--pewt);}
   }
   
   /* Add a red background color to the cancel button */
-.form-container .cancel {
+.signIn-container .cancel {
     background-color: var(--salm);
   }
-.form-container .register {
+.signIn-container .register {
     background-color: #4B3F72;
   }
   
   /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.signIn-container .btn:hover, .open-button:hover {
     opacity: 1;
   }
 
